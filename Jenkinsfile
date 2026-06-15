@@ -19,11 +19,6 @@ pipeline {
  stage('Selenium Test') {
  steps { sh 'mvn test' }
  }
- stage ('execute') {
- steps {
- sh 'mvn exec:java -Dexec.mainClass="com.example.App"'
- }
- }
  stage('Custom Message') {
  steps {
  echo 'Selenium Automation Testing Executed Successfully!'
